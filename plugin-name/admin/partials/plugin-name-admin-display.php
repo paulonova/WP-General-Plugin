@@ -31,8 +31,9 @@
   <form class="container" method="post" action="options.php">
 
     <?php 
-      settings_fields( 'wpcustomfields' );
-      do_settings_sections( 'wpcustomfields' );
+      //Create the filed tha this forms element will be saved inside the database, theemail, thedays, etc..
+      settings_fields( 'wpcustomfields' ); // Create
+      do_settings_sections( 'wpcustomfields' ); //Call
     ?>
     <div class="form-group">
       <label for="exampleFormControlInput1">Email address</label>

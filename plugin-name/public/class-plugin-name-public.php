@@ -100,4 +100,8 @@ class Plugin_Name_Public {
 
 	}
 
+	public function public_hello_world(){
+		echo "Hello Paulo Nova";
+	}
+
 }

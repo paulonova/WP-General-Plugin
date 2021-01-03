@@ -160,7 +160,7 @@ class Plugin_Name {
 		//Add admin menu items
 		$this->loader->add_action( 'admin_menu', $plugin_admin, 'my_admin_menu' );
 
-		//Register our general settings
+		//Register our general settings to Form element
 		$this->loader->add_action('admin_init', $plugin_admin, 'register_wp_general_settings');
 
 	}
@@ -178,6 +178,9 @@ class Plugin_Name {
 
 		$this->loader->add_action( 'wp_enqueue_scripts', $plugin_public, 'enqueue_styles' );
 		$this->loader->add_action( 'wp_enqueue_scripts', $plugin_public, 'enqueue_scripts' );
+
+		//Add shortcode
+		$this->loader->add_shortcode( 'my-shortcode', $plugin_public, 'public_hello_world' );
 
 	}
 
